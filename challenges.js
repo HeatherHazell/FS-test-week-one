@@ -59,24 +59,25 @@ const x = [[[1, 0, -3], [2, 4], [3]], [[4, 4, 3], [5, -3, -1], [6, 10]], [[7, -5
 console.log(addGridItems(x)); // 50
 ------------------*/
 
-function addGridItems(grid){
-let total = 0;
-for (let x of grid) {
-  for (let y of x) {
-    for (let num of y) {
-      total += num
-    }
-  }
-}
-return total
-}
+// **Assuming it will always be two layers deep and iterating through each item..
+// function addGridItems(grid){
+// let total = 0;
+// for (let x of grid) {
+//   for (let y of x) {
+//     for (let num of y) {
+//       total += num
+//     }
+//   }
+// }
+// return total
+// }
 
 
-const y = [[[1], [2]]];
-console.log(addGridItems(y)); // 3
+// const y = [[[1], [2]]];
+// console.log(addGridItems(y)); // 3
 
-const x = [[[1, 0, -3], [2, 4], [3]], [[4, 4, 3], [5, -3, -1], [6, 10]], [[7, -5, -5], [8, 0], [9, 1]]];
-console.log(addGridItems(x)); // 50
+// const x = [[[1, 0, -3], [2, 4], [3]], [[4, 4, 3], [5, -3, -1], [6, 10]], [[7, -5, -5], [8, 0], [9, 1]]];
+// console.log(addGridItems(x)); // 50
 
 /*------------------
 3)
@@ -99,8 +100,12 @@ console.log(createFileName("Sofia Profile Photo", "image")); // "sofia_profile_p
 console.log(createFileName("Data from Pokemon API", "JSON")); // "data_from_pokemon_api.json"
 ------------------*/
 
-// function createFileName(string, typeOfFile) {}
-
+// ANSWER
+// function createFileName(string, typeOfFile){
+//     let files = 'pdf' || 'png' || 'json';
+//     const safeName = string.toLowerCase().replaceAll(" ", "_");
+//     return `${safeName}.${files[typeOfFile]}` 
+// }
 
 // console.log(createFileName("Sofia Engineering Resume", "PDF")); // "sofia_engineering_resume.pdf"
 // console.log(createFileName("Sofia Profile Photo", "image")); // "sofia_profile_photo.png"
@@ -118,20 +123,25 @@ Hints:
 - Use a loop within a loop.
 ------------------*/
 
-// for (let num = 99; num.length <=5; num = num -=3){
-//     console.log(num);
+// for (let i = 99; i.length <=5; i = i-3){
+//       for (let j = 99; j<= i; j-3){
+//     console.log(j + " ");
 //   }
-
+//   console.log()
+// }
 //   for (let i = 5; i >= 99; --i) {
-//     for (let j = 99; j <= i; ++j) {
-//       console.log(`${j} `);
-//     }
-//     console.log();
-//   }
-
-//   for (let i = 5; i <= 99; i -= 3) {
-//     for (let j = 1; j <= i; j -=3) {
+//     for (let j = 5; j <= 99; --j) {
 //       console.log(j + " ");
 //     }
 //     console.log();
 //   }
+
+// let x,y,z;
+// for(x=1; x <=6; x++)
+// {
+//    for (y=1; y < x; y++)
+//      {
+    
+//  console.log(y);
+//      }    
+// }
