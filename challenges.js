@@ -59,7 +59,7 @@ const x = [[[1, 0, -3], [2, 4], [3]], [[4, 4, 3], [5, -3, -1], [6, 10]], [[7, -5
 console.log(addGridItems(x)); // 50
 ------------------*/
 
-// **Assuming it will always be two layers deep and iterating through each item..
+// ANSWER **Assuming it will always be two layers deep and iterating through each item..
 // function addGridItems(grid){
 // let total = 0;
 // for (let x of grid) {
@@ -123,6 +123,7 @@ Hints:
 - Use a loop within a loop.
 ------------------*/
 
+// ATTEMPTS
 // for (let i = 99; i.length <=5; i = i-3){
 //       for (let j = 99; j<= i; j-3){
 //     console.log(j + " ");
@@ -144,4 +145,17 @@ Hints:
     
 //  console.log(y);
 //      }    
+// }
+
+// items = [99,96,93,90,88]
+// for (let i = items.length; i > 0; --i){
+//     new = []
+//     for ()
+// }
+
+// ANSWER
+// items = [99,96,93,90,88]
+// while (items.length) {
+//   console.log(items.join(" "))
+//   items.pop()
 // }
